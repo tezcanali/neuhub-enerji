@@ -6,11 +6,13 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use RalphJSmit\Laravel\SEO\Support\HasSEO;
 use Spatie\Sluggable\HasSlug;
+use Spatie\Sluggable\HasTranslatableSlug;
 use Spatie\Sluggable\SlugOptions;
+use Spatie\Translatable\HasTranslations;
 
 class PowerStation extends Model
 {
-    use HasFactory, HasSEO, HasSlug;
+    use HasFactory, HasSEO, HasTranslations, HasTranslatableSlug;
 
     protected $fillable = [
         'title',
@@ -18,7 +20,9 @@ class PowerStation extends Model
         'image',
         'icons',
         'file1',
+        'file1_name',
         'file2',
+        'file2_name',
         'galleries',
         'slug',
     ];
@@ -29,7 +33,9 @@ class PowerStation extends Model
         'image' => 'array',
         'icons' => 'array',
         'file1' => 'array',
+        'file1_name' => 'array',
         'file2' => 'array',
+        'file2_name' => 'array',
         'galleries' => 'array',
         'slug' => 'array',
     ];
@@ -38,9 +44,10 @@ class PowerStation extends Model
         'title',
         'location',
         'image',
-        'icons',
         'file1',
+        'file1_name',
         'file2',
+        'file2_name',
         'galleries',
         'slug',
     ];
@@ -51,17 +58,9 @@ class PowerStation extends Model
     public function getSlugOptions() : SlugOptions
     {
         return SlugOptions::create()
-            ->generateSlugsFrom('title')
             ->saveSlugsTo('slug');
     }
 
-    /**
-     * Get the route key for the model.
-     *
-     * @return string
-     */
-    public function getRouteKeyName()
-    {
-        return 'slug';
-    }
+
+
 }

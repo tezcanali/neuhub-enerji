@@ -15,10 +15,10 @@ return new class extends Migration
             $table->id();
             $table->foreignId('author_id')->constrained('users');
             $table->foreignId('category_id')->constrained('blog_categories');
-            $table->string('title');
-            $table->text('content');
-            $table->string('slug');
-            $table->string('image');
+            $table->json('title');
+            $table->json('content');
+            $table->json('slug');
+            $table->json('image');
             $table->enum('status', ['draft', 'published']);
             $table->timestamps();
         });

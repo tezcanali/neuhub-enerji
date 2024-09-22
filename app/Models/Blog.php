@@ -5,12 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use RalphJSmit\Laravel\SEO\Support\HasSEO;
-use Spatie\Sluggable\HasSlug;
+use Spatie\Sluggable\HasTranslatableSlug;
 use Spatie\Sluggable\SlugOptions;
+use Spatie\Translatable\HasTranslations;
 
 class Blog extends Model
 {
-    use HasFactory, HasSEO, HasSlug;
+    use HasFactory, HasSEO, HasTranslations, HasTranslatableSlug;
 
     protected $fillable = [
         'title',
@@ -25,7 +26,20 @@ class Blog extends Model
     ];
 
     protected $casts = [
+        'title' => 'array',
+        'content' => 'array',
+        'image' => 'array',
+        'subtitle' => 'array',
         'galleries' => 'array'
+    ];
+
+    public $translatable = [
+        'title',
+        'subtitle',
+        'content',
+        'image',
+        'galleries',
+        'slug'
     ];
 
     /**

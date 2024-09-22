@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('blog_categories', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('content')->nullable();
-            $table->string('slug');
+            $table->json('title');
+            $table->json('content')->nullable();
+            $table->json('slug');
             $table->timestamps();
         });
     }

@@ -46,13 +46,13 @@ class BlogResource extends Resource
                             ->schema([
                                 TextInput::make('subtitle')
                                     ->label('Üst Başlık')
-                                    ->required(),
+                                    ->translatable(),
                                 TextInput::make('title')
                                     ->label('Başlık')
-                                    ->required(),
+                                    ->translatable(),
                                 RichEditor::make('content')
                                     ->label('İçerik')
-                                    ->required(),
+                                    ->translatable(),
                             ]),
                         Tabs\Tab::make('Info')
                             ->columns([
@@ -99,13 +99,13 @@ class BlogResource extends Resource
                                 FileUpload::make('image')
                                     ->label('Blog Görsel')
                                     ->image()
-                                    ->required()
                                     ->maxSize(150000)
                                     ->disk('public')
                                     ->directory('blog_images')
                                     ->acceptedFileTypes([
                                         'image/*'
                                     ])
+                                    ->translatable()
                                     ->columnSpan([
                                         'sm' => 3,
                                         'xl' => 6,
@@ -123,9 +123,9 @@ class BlogResource extends Resource
                                             ->maxSize(150000)
                                             ->disk('public')
                                             ->directory('img')
-                                            ->required()
                                             ->optimize('webp'),
-                                    ]),
+                                    ])
+                                    ->translatable(),
                             ]),
                         Tabs\Tab::make('SEO')
                             ->schema([

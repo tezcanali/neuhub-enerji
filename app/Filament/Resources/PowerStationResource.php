@@ -15,6 +15,9 @@ use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Actions\Action;
+use Filament\Tables\Columns\ImageColumn;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use RalphJSmit\Filament\SEO\SEO;
 
@@ -37,91 +40,97 @@ class PowerStationResource extends Resource
                             ->schema([
                                 Repeater::make('icons.company')
                                     ->schema([
-                                        TextInput::make('name')
+                                        TextInput::make('title')
                                             ->label('Şirket İsmi')
-                                            ->required(),
+                                            ,
                                         TextInput::make('description')
                                             ->label('Kısa Metin')
-                                            ->required(),
+                                            ,
                                     ])
                                     ->label('Şirket')
                                     ->addable(false)
                                     ->reorderable(false)
                                     ->deletable(false)
-                                    ->columns(2),
+                                    ->columns(2)
+                                    ->translatable(),
                                 Repeater::make('icons.location')
                                     ->schema([
                                         TextInput::make('year')
                                             ->label('Yıl')
-                                            ->required(),
+                                            ,
                                         TextInput::make('location')
                                             ->label('Konum')
-                                            ->required(),
+                                            ,
                                         TextInput::make('description')
                                             ->label('Kısa Metin')
-                                            ->required(),
+                                            ,
                                     ])
                                     ->label('Konum')
                                     ->addable(false)
                                     ->reorderable(false)
                                     ->deletable(false)
-                                    ->columns(3),
+                                    ->columns(3)
+                                    ->translatable(),
                                 Repeater::make('icons.energy')
                                     ->schema([
                                         TextInput::make('title')
                                             ->label('Başlık')
-                                            ->required(),
+                                            ,
                                         TextInput::make('description')
                                             ->label('Kısa Metin')
-                                            ->required(),
+                                            ,
                                     ])
                                     ->label('Enerji')
                                     ->addable(false)
                                     ->reorderable(false)
                                     ->deletable(false)
-                                    ->columns(2),
+                                    ->columns(2)
+                                    ->translatable(),
                                 Repeater::make('icons.turbin')
                                     ->schema([
                                         TextInput::make('title')
                                             ->label('Başlık')
-                                            ->required(),
+                                            ,
                                         TextInput::make('description')
                                             ->label('Kısa Metin')
-                                            ->required(),
+                                            ,
                                     ])
                                     ->label('Türbin')
                                     ->addable(false)
                                     ->reorderable(false)
                                     ->deletable(false)
-                                    ->columns(2),
+                                    ->columns(2)
+                                    ->translatable(),
                                 Repeater::make('icons.tuketim')
                                     ->schema([
                                         TextInput::make('title')
                                             ->label('Başlık')
-                                            ->required(),
+                                            ,
                                         TextInput::make('description')
                                             ->label('Kısa Metin')
-                                            ->required(),
+                                            ,
                                     ])
                                     ->label('Tüketim')
                                     ->addable(false)
                                     ->reorderable(false)
                                     ->deletable(false)
-                                    ->columns(2),
+                                    ->columns(2)
+                                    ->translatable(),
                                 Repeater::make('icons.emisyon')
                                     ->schema([
                                         TextInput::make('title')
                                             ->label('Başlık')
-                                            ->required(),
+                                            ,
                                         TextInput::make('description')
                                             ->label('Kısa Metin')
-                                            ->required(),
+                                            ,
                                     ])
                                     ->label('Emisyon')
                                     ->addable(false)
                                     ->reorderable(false)
                                     ->deletable(false)
-                                    ->columns(2),
+                                    ->columns(2)
+                                    ->translatable(),
                             ]),
                         Tabs\Tab::make('Galeri')
                             ->schema([
@@ -133,31 +142,36 @@ class PowerStationResource extends Resource
                                             ->maxSize(150000)
                                             ->disk('public')
                                             ->directory('img')
-                                            ->required()
+
                                             ->optimize('webp'),
                                     ])
                                     ->collapsible()
-                                    ->label('Galeri'),
+                                    ->label('Galeri')
+                                    ->translatable(),
                             ]),
                         Tabs\Tab::make('Dosyalar')
                             ->schema([
                                 TextInput::make('file1_name')
-                                    ->label('PDF 1 Başlık'),
+                                    ->label('PDF 1 Başlık')
+                                    ->translatable(),
                                 FileUpload::make('file1')
                                     ->label('PDF 1')
                                     ->maxSize(150000)
                                     ->disk('public')
                                     ->directory('file')
-                                    ->optimize('webp'),
+                                    ->optimize('webp')
+                                    ->translatable(),
                                 TextInput::make('file2_name')
-                                    ->label('PDF 2 Başlık'),
+                                    ->label('PDF 2 Başlık')
+                                    ->translatable(),
                                 FileUpload::make('file2')
                                     ->label('PDF 2')
                                     ->image()
                                     ->maxSize(150000)
                                     ->disk('public')
                                     ->directory('file')
-                                    ->optimize('webp'),
+                                    ->optimize('webp')
+                                    ->translatable(),
                             ]),
                         Tabs\Tab::make('SEO')
                             ->schema([
@@ -173,21 +187,25 @@ class PowerStationResource extends Resource
                     ->schema([
                         TextInput::make('title')
                             ->label('Başlık')
-                            ->required(),
+
+                            ->translatable(),
                         TextInput::make('slug')
                             ->label('Slug')
-                            ->required(),
+
+                            ->translatable(),
                         TextInput::make('location')
                             ->label('Konum')
-                            ->required(),
+
+                            ->translatable(),
                         FileUpload::make('image')
                             ->label('Kapak Görsel')
                             ->image()
                             ->maxSize(150000)
                             ->disk('public')
                             ->directory('img')
-                            ->required()
-                            ->optimize('webp'),
+
+                            ->optimize('webp')
+                            ->translatable(),
                     ])
                     ->columnSpan([
                         'sm' => 2,
@@ -205,12 +223,22 @@ class PowerStationResource extends Resource
     {
         return $table
             ->columns([
-                //
+                ImageColumn::make('image')
+                    ->size(50)
+                    ->label(__('table.labels.image')),
+                TextColumn::make('title')
+                    ->label(__('table.labels.title')),
             ])
             ->filters([
                 //
             ])
             ->actions([
+                Action::make('visit')
+                    ->label(__('filament-fabricator::page-resource.actions.visit'))
+                    ->url(fn ($record) => url('/santrallerimiz/' . $record->slug))
+                    ->icon('heroicon-o-arrow-top-right-on-square')
+                    ->openUrlInNewTab()
+                    ->color('success'),
                 Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([

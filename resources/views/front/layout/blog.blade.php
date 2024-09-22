@@ -112,30 +112,32 @@
             </div>
         </section>
 
-        <section class="content content--text pb-4 pb-sm-6 pb-xl-8">
-            <div class="container">
-                <div class="row row-spacing-2 row-spacing-xl-4">
-                    <div class="col-24">
-                        <div class="row row-spacing">
-                            <div class="col-12 col-sm-8 col-md-6 col-xl-4"><a
-                                    href="./assets/contents/674/Image.jpg?v=20240904132530"
-                                    title="POLAT ENERJİ MANİSA’DAN GELECEĞE YEŞİL IŞIK YAKTI" class="swipebox"
-                                    rel="gallery-673">
-                                    <figure class="content-image"><img
-                                            src="./assets/cache/674/Image-270x270-0.jpg?v=20240904132530"
-                                            data-src="./assets/cache/674/Image-270x270-0.jpg?v=20240904132530"
-                                            width="100%" data-loader="{ &quot;height&quot;: 168.66 }"
-                                            alt="POLAT ENERJİ MANİSA’DAN GELECEĞE YEŞİL IŞIK YAKTI"
-                                            class="loader--loaded"></figure>
-                                </a>
+        @if($blog->galleries)
+            <section class="content content--text pb-4 pb-sm-6 pb-xl-8">
+                <div class="container">
+                    <div class="row row-spacing-2 row-spacing-xl-4">
+                        <div class="col-24">
+                            <div class="row row-spacing">
+                                @foreach($blog->galleries as $gallery)
+                                    <div class="col-12 col-sm-8 col-md-6 col-xl-4"><a
+                                            href="{{ \Illuminate\Support\Facades\Storage::url($gallery['image']) }}"
+                                            class="swipebox"
+                                            rel="gallery-673">
+                                            <figure class="content-image"><img
+                                                    src="{{ \Illuminate\Support\Facades\Storage::url($gallery['image']) }}"
+                                                    data-src="{{ \Illuminate\Support\Facades\Storage::url($gallery['image']) }}"
+                                                    width="100%" data-loader="{ &quot;height&quot;: 168.66 }"
+                                                    alt="POLAT ENERJİ MANİSA’DAN GELECEĞE YEŞİL IŞIK YAKTI"
+                                                    class="loader--loaded"></figure>
+                                        </a>
+                                    </div>
+                                @endforeach
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-
+            </section>
+        @endif
     </main>
 
     {{ \Filament\Facades\Filament::renderHook('filament-fabricator.scripts.start') }}

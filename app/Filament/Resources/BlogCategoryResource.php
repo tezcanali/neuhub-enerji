@@ -36,8 +36,8 @@ class BlogCategoryResource extends Resource
                 ->tabs([
                     Tabs\Tab::make('Info')
                         ->schema([
-                            TextInput::make('title')->required()->label('Başlık'),
-                            Textarea::make('content')->required()->label('İçerik'),
+                            TextInput::make('title')->label('Başlık')->translatable(),
+                            Textarea::make('content')->label('İçerik')->translatable(),
                         ]),
                     Tabs\Tab::make('SEO')
                         ->schema([

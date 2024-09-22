@@ -19,7 +19,9 @@ return new class extends Migration
             $table->json('image');
             $table->json('icons');
             $table->json('file1');
+            $table->json('file1_name');
             $table->json('file2');
+            $table->json('file2_name');
             $table->json('galleries');
             $table->timestamps();
         });

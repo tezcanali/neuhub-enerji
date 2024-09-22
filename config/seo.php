@@ -3,6 +3,10 @@
 use RalphJSmit\Laravel\SEO\Models\SEO;
 
 return [
+    'locales' => [ //Add your locales here
+        'tr',
+        'en',
+    ],
     /**
      * The SEO model. You can use this setting to override the model used by the package.
      * Make sure to always extend the old model, so that you'll not lose functionality during upgrades.
