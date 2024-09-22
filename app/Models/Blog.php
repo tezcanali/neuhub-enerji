@@ -20,7 +20,12 @@ class Blog extends Model
         'image',
         'slug',
         'status',
-        'subtitle'
+        'subtitle',
+        'galleries',
+    ];
+
+    protected $casts = [
+        'galleries' => 'array'
     ];
 
     /**

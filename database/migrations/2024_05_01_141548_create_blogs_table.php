@@ -16,7 +16,7 @@ return new class extends Migration
             $table->foreignId('author_id')->constrained('users');
             $table->foreignId('category_id')->constrained('blog_categories');
             $table->string('title');
-            $table->string('content');
+            $table->text('content');
             $table->string('slug');
             $table->string('image');
             $table->enum('status', ['draft', 'published']);

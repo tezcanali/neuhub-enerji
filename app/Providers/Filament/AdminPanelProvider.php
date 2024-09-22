@@ -19,9 +19,11 @@ use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
 use Joaopaulolndev\FilamentGeneralSettings\FilamentGeneralSettingsPlugin;
+use Outerweb\FilamentTranslatableFields\Filament\Plugins\FilamentTranslatableFieldsPlugin;
 use ShuvroRoy\FilamentSpatieLaravelHealth\FilamentSpatieLaravelHealthPlugin;
 use Z3d0X\FilamentFabricator\Enums\BlockPickerStyle;
 use Z3d0X\FilamentFabricator\FilamentFabricatorPlugin;
+use Filament\SpatieLaravelTranslatablePlugin;
 
 class AdminPanelProvider extends PanelProvider
 {
@@ -67,7 +69,12 @@ class AdminPanelProvider extends PanelProvider
                     ->setIcon('heroicon-o-cog')
                     ->setNavigationGroup('Sistem'),
                 FilamentSpatieLaravelHealthPlugin::make()
-                    ->usingPage(HealthCheckResults::class)
+                    ->usingPage(HealthCheckResults::class),
+                FilamentTranslatableFieldsPlugin::make()
+                    ->supportedLocales([
+                        'tr' => 'Turkish',
+                        'en' => 'English',
+                    ]),
             ]);
     }
 }

@@ -5,7 +5,6 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\BlogCategoryResource\Pages;
 use App\Filament\Resources\BlogCategoryResource\RelationManagers;
 use App\Models\BlogCategory;
-use Filament\Forms;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Tabs;
@@ -13,8 +12,6 @@ use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 use RalphJSmit\Filament\SEO\SEO;
 
 class BlogCategoryResource extends Resource

@@ -18,7 +18,6 @@ use Spatie\Health\Checks\Checks\DebugModeCheck;
 use Spatie\Health\Checks\Checks\EnvironmentCheck;
 use Z3d0X\FilamentFabricator\Facades\FilamentFabricator;
 use Z3d0X\FilamentFabricator\Forms\Components\PageBuilder;
-use Z3d0X\FilamentFabricator\Resources\PageResource;
 
 class AppServiceProvider extends ServiceProvider
 {

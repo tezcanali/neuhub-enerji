@@ -8,6 +8,7 @@ use App\Models\Blog;
 use App\Models\BlogCategory;
 use App\Models\User;
 use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Tabs;
@@ -23,6 +24,7 @@ use RalphJSmit\Filament\SEO\SEO;
 
 class BlogResource extends Resource
 {
+
     protected static ?string $model = Blog::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
@@ -108,6 +110,21 @@ class BlogResource extends Resource
                                         'sm' => 3,
                                         'xl' => 6,
                                         '2xl' => 12,
+                                    ]),
+                            ]),
+                        Tabs\Tab::make('Galleries')
+                            ->schema([
+                                Repeater::make('galleries')
+                                    ->label('Galeri')
+                                    ->schema([
+                                        FileUpload::make('image')
+                                            ->label('Görsel')
+                                            ->image()
+                                            ->maxSize(150000)
+                                            ->disk('public')
+                                            ->directory('img')
+                                            ->required()
+                                            ->optimize('webp'),
                                     ]),
                             ]),
                         Tabs\Tab::make('SEO')

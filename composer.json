@@ -11,6 +11,7 @@
         "joshembling/image-optimizer": "^1.4",
         "laravel/framework": "^11.9",
         "laravel/tinker": "^2.9",
+        "outerweb/filament-translatable-fields": "^2.0",
         "ralphjsmit/laravel-filament-seo": "^1.3",
         "shuvroroy/filament-spatie-laravel-health": "*",
         "spatie/laravel-sluggable": "^3.6",

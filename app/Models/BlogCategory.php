@@ -15,7 +15,7 @@ class BlogCategory extends Model
     protected $fillable = [
         'title',
         'content',
-        'slug'
+        'slug',
     ];
 
     /**
