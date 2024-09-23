@@ -27,7 +27,7 @@ class Slider extends PageBlock
                                 'xl' => 6,
                                 '2xl' => 6,
                             ])
-                            ->label('Video & Görsel')
+                            ->label('Video')
                             ->maxSize(150000)
                             ->disk('public')
                             ->required(),

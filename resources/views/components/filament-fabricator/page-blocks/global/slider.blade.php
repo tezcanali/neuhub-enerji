@@ -8,12 +8,8 @@
                     @foreach($sliders as $slide)
                         <div class="swiper-slide" data-swiper-bullet-name="{!! $slide['subtitle'] !!}"
                         >
-                            <figure class="banner-image background--fixed loader--loaded"
-                                    src="{{ asset('front/images/empty.png')}}"
-                                    data-src="{{ \Illuminate\Support\Facades\Storage::url($slide['image']) }}"
-                                    data-loader="{ bg: false, over: true }"
-                                    data-swiper-parallax-opacity="0.4"
-                                    style="background-image: url({{ \Illuminate\Support\Facades\Storage::url($slide['image']) }});">
+                            <figure class="banner-image">
+                                <video src="{{ \Illuminate\Support\Facades\Storage::url($slide['image']) }}" autoplay loop muted></video>
                             </figure>
                             <div class="banner-content">
                                 <div
