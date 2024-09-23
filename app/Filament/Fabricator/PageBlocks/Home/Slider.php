@@ -48,7 +48,7 @@ class Slider extends PageBlock
                             'sm' => 2,
                             'xl' => 6,
                             '2xl' => 6,
-                        ])->label('Açıklama')->url(),
+                        ])->label('Açıklama'),
                     ])
                     ->collapsed()
                     ->itemLabel(fn (array $state): ?string => $state['subtitle'] ?? null)
