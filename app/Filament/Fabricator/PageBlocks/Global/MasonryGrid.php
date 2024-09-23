@@ -25,8 +25,7 @@ class MasonryGrid extends PageBlock
                             ->optimize('webp'),
                         TextInput::make('title')
                             ->required(),
-                        TextInput::make('description')
-                            ->required(),
+                        TextInput::make('description'),
                         TextInput::make('button_name')
                             ->required(),
                         TextInput::make('url')
