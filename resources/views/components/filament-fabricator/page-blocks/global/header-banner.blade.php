@@ -2,16 +2,16 @@
 <section class="banner banner--inside">
     <div class="container-full">
         <div class="swiper"
-             data-swiper="{ &quot;autoplay&quot;: { &quot;delay&quot;: 12000 }, &quot;speed&quot;: 1200, &quot;parallax&quot;: true }">
+             data-swiper="{ autoplay: { delay: 12000 }, speed: 1200, parallax: true }">
             <div class="swiper-container swiper-container-initialized swiper-container-horizontal">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide swiper-slide-active" style="width: 1201px;">
                         <figure class="banner-image background--fixed loader--loaded"
                                 src="./assets/images/empty.png"
-                                data-src="./assets/cache/87/Image-1920x540-0.jpg?v=20240904132530"
-                                data-loader="{ &quot;bg&quot;: false, &quot;over&quot;: true }"
+                                data-src="{{ \Illuminate\Support\Facades\Storage::url($image) }}"
+                                data-loader="{ bg: false, over: true }"
                                 data-swiper-parallax-opacity="0.4"
-                                style="opacity: 1; transform: translate3d(0px, 0px, 0px); background-image: url(&quot;./assets/cache/87/Image-1920x540-0.jpg?v=20240904132530&quot;);">
+                                style="opacity: 1; transform: translate3d(0px, 0px, 0px); background-image: url({{ \Illuminate\Support\Facades\Storage::url($image) }});">
                         </figure>
                         <div class="banner-content">
                             <div class="container-full d-flex align-items-end">
@@ -26,14 +26,14 @@
                                             <li class="breadcrumb-item active wow fadeInUp"
                                                 data-wow-duration="1s" data-wow-delay="0.15s"
                                                 data-wow-offset="0"
-                                                style="visibility: hidden; animation-duration: 1s; animation-delay: 0.15s; animation-name: none;">
-                                                SANTRALLERİMİZ</li>
+                                                style="visibility: hidden; animation-duration: 1s; animation-delay: 0.15s; animation-name: none; text-transform: uppercase">
+                                                {{ $page->title }}</li>
                                         </ol>
                                     </nav>
                                     <h1 class="content-title h1 wow fadeInUp" data-wow-duration="1s"
                                         data-wow-delay="0.25s" data-wow-offset="0"
                                         style="visibility: hidden; animation-duration: 1s; animation-delay: 0.25s; animation-name: none;">
-                                        Güneşi Çok, Rüzgârı Bol Anadolu,<br>Yaşam ve Enerji Dolu</h1>
+                                        {{ $subtitle }}</h1>
                                 </article>
                             </div>
                         </div>
