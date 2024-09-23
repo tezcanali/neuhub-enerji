@@ -12,14 +12,14 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('blogs', function (Blueprint $table) {
-            $table->json('subtitle');
+            $table->json('subtitle')->nullable();
         });
     }
 
     public function down(): void
     {
         Schema::table('blogs', function (Blueprint $table) {
-            $table->dropColumn('subtitle');
+            $table->dropColumn('subtitle')->nullable();
         });
     }
 };

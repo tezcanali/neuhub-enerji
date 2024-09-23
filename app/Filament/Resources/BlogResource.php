@@ -7,6 +7,7 @@ use App\Filament\Resources\BlogResource\RelationManagers;
 use App\Models\Blog;
 use App\Models\BlogCategory;
 use App\Models\User;
+use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\RichEditor;
@@ -44,9 +45,6 @@ class BlogResource extends Resource
                     ->tabs([
                         Tabs\Tab::make('Body')
                             ->schema([
-                                TextInput::make('subtitle')
-                                    ->label('Üst Başlık')
-                                    ->translatable(),
                                 TextInput::make('title')
                                     ->label('Başlık')
                                     ->translatable(),
@@ -67,9 +65,9 @@ class BlogResource extends Resource
                                     ->label('Yazar')
                                     ->required()
                                     ->columnSpan([
-                                        'sm' => 1,
-                                        'xl' => 2,
-                                        '2xl' => 4,
+                                        'sm' => 2,
+                                        'xl' => 1,
+                                        '2xl' => 3,
                                     ])
                                     ->native(false),
                                 Select::make('category_id')
@@ -78,9 +76,9 @@ class BlogResource extends Resource
                                     ->required()
                                     ->label('Kategori')
                                     ->columnSpan([
-                                        'sm' => 1,
+                                        'sm' => 2,
                                         'xl' => 2,
-                                        '2xl' => 4,
+                                        '2xl' => 3,
                                     ])
                                     ->native(false),
                                 Select::make('status')
@@ -91,11 +89,20 @@ class BlogResource extends Resource
                                     ->label('Durum')
                                     ->required()
                                     ->columnSpan([
-                                        'sm' => 1,
-                                        'xl' => 2,
-                                        '2xl' => 4,
+                                        'sm' => 2,
+                                        'xl' => 1,
+                                        '2xl' => 3,
                                     ])
                                     ->native(false),
+                                DateTimePicker::make('created_at')
+                                    ->seconds(false)
+                                    ->native(false)
+                                    ->columnSpan([
+                                        'sm' => 2,
+                                        'xl' => 2,
+                                        '2xl' => 3,
+                                    ])
+                                    ->label('Oluşturma Tarihi'),
                                 FileUpload::make('image')
                                     ->label('Blog Görsel')
                                     ->image()

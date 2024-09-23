@@ -62,17 +62,12 @@
                                                         style="visibility: hidden; animation-duration: 1s; animation-delay: 0.05s; animation-name: none;">
                                                         <a href="/" target="_self" title="Anasayfa">Anasayfa</a>
                                                     </li>
-                                                    <li class="breadcrumb-item wow fadeInUp"
+                                                    <li class="breadcrumb-item active wow fadeInUp"
                                                         data-wow-duration="1s" data-wow-delay="0.15s"
                                                         data-wow-offset="0"
                                                         style="visibility: hidden; animation-duration: 1s; animation-delay: 0.15s; animation-name: none;">
                                                         <a href="/haberler" target="_self" title="Haberler">Haberler</a>
                                                     </li>
-                                                    <li class="breadcrumb-item ACTİVE wow fadeInUp"
-                                                        data-wow-duration="1s" data-wow-delay="0.15s"
-                                                        data-wow-offset="0"
-                                                        style="visibility: hidden; animation-duration: 1s; animation-delay: 0.15s; animation-name: none;">
-                                                        {{ $blog->title }}</li>
                                                 </ol>
                                             </nav>
                                             <h1 class="content-title h1 wow fadeInUp" data-wow-duration="1s"

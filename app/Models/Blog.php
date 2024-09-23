@@ -23,6 +23,7 @@ class Blog extends Model
         'status',
         'subtitle',
         'galleries',
+        'created_at',
     ];
 
     protected $casts = [
