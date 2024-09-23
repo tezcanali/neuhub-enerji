@@ -27,13 +27,10 @@ class Slider extends PageBlock
                                 'xl' => 6,
                                 '2xl' => 6,
                             ])
-                            ->label('Görsel')
-                            ->image()
+                            ->label('Video & Görsel')
                             ->maxSize(150000)
                             ->disk('public')
-                            ->required()
-                            ->directory('img')
-                            ->optimize('webp'),
+                            ->required(),
                         TextInput::make('subtitle')->columnSpan([
                             'sm' => 2,
                             'xl' => 6,
