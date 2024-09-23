@@ -12,13 +12,13 @@
                             <p class="content-description">{!! $rightDescription !!}</p> <span
                                 class="btn btn-default btn-light">Daha Fazla</span>
                         </article>
-                        <div class="info-boxes-item-figure col-lg-12 order-1 order-lg-2">
-                            <figure class="content-image background background--cover loader--loaded"
-                                    src="./assets/images/empty.png"
-                                    data-src="{{ Storage::url($rightImage) }}"
-                                    data-loader="{ bg: false, over: true }"
-                                    style="background-image: url({{ Storage::url($rightImage) }});"></figure>
-                        </div>
+                    </div>
+                    <div class="info-boxes-item-figure col-lg-12 order-1 order-lg-2">
+                        <figure class="content-image background background--cover loader--loaded"
+                                src="./assets/images/empty.png"
+                                data-src="{{ Storage::url($rightImage) }}"
+                                data-loader="{ bg: false, over: true }"
+                                style="background-image: url({{ Storage::url($rightImage) }});"></figure>
                     </div>
                 </div>
             </a>

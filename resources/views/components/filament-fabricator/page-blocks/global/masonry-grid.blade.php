@@ -18,7 +18,7 @@
                     <article class="routing-box-body content-body">
                         <h2 class="content-title h2">{{ $grid['title'] }}</h2>
                         <div class="content-description">{{ $grid['description'] }}</div>
-                        <div class="btn btn-default btn-primary">DAHA FAZLA</div>
+                        <div class="btn btn-default btn-primary">{!! $grid['buttonName'] !!}</div>
                     </article>
                 </a>
             </div>

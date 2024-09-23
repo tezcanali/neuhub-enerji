@@ -27,9 +27,13 @@ class MasonryGrid extends PageBlock
                             ->required(),
                         TextInput::make('description')
                             ->required(),
+                        TextInput::make('button_name')
+                            ->required(),
                         TextInput::make('url')
                             ->required(),
-                    ])->cloneable()
+                    ])
+                    ->cloneable()
+                    ->collapsible()
             ]);
     }
 
