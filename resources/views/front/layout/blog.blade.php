@@ -73,7 +73,7 @@
                                             <h1 class="content-title h1 wow fadeInUp" data-wow-duration="1s"
                                                 data-wow-delay="0.25s" data-wow-offset="0"
                                                 style="visibility: hidden; animation-duration: 1s; animation-delay: 0.25s; animation-name: none;">
-                                                {{ $blog->title }}</h1>
+                                                Haberler</h1>
                                         </article>
                                     </div>
                                 </div>
@@ -93,7 +93,7 @@
                     <div class="col-24">
                         <article class="content-body"><small
                                 class="content-subtitle color-primary">{{ $blog->created_at->format('d M Y H:i:s') }}</small>
-                            <h2 class="content-title h2">{{ $blog->subtitle }}</h2>
+                            <h2 class="content-title h2">{{ $blog->title }}</h2>
                             <div class="content-description">
                                 <div class="row row-spacing">
                                     <div class="col-xl-24">
