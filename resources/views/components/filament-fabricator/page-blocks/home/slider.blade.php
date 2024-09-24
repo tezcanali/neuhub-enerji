@@ -44,12 +44,18 @@
             </div>
         </div>
         <div class="copyright d-none d-sm-block">
-            <p>©2019, Polat Enerji. Tüm hakları saklıdır.</p>
+            <p>@lang('front.copyright')</p>
             <ul>
-                <li><a href="/politikalar-ve-belgeler/" title="Politikalar ve Belgeler"
-                       class="active">Politikalar ve Belgeler</a></li>
-                <li><a href="/cerez-politikasi/" title="Çerez Politikası" class="active">Çerez
-                        Politikası</a></li>
+                @if(app()->getLocale() == 'en')
+                    <li>
+                        <a href="/en/cookie-policy/" title="@lang('front.cookie')"
+                           class="active">@lang('front.cookie_en')</a>
+                    </li>
+                @else
+                    <li><a href="/politikalar-ve-belgeler/" title="@lang('front.documents')"
+                           class="active">@lang('front.documents')</a></li>
+                    <li><a href="/cerez-politikasi/" title="@lang('front.cookie')" class="active">@lang('front.cookie')</a></li>
+                @endif
             </ul>
         </div>
         <div class="scroll-down js-scroll-down" title="Aşağıya Kaydır">

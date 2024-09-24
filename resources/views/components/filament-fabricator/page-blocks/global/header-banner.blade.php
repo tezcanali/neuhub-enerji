@@ -1,4 +1,7 @@
 @aware(['page'])
+@php
+    $locale = app()->getLocale();
+@endphp
 <section class="banner banner--inside">
     <div class="container-full">
         <div class="swiper"
@@ -21,7 +24,7 @@
                                             <li class="breadcrumb-item wow fadeInUp" data-wow-duration="1s"
                                                 data-wow-delay="0.05s" data-wow-offset="0"
                                                 style="visibility: hidden; animation-duration: 1s; animation-delay: 0.05s; animation-name: none;">
-                                                <a href="./" target="_self" title="Anasayfa">ANASAYFA</a>
+                                                <a href="{{ $locale == 'en' ? '/en/' : '/' }}" target="_self" title="@lang('front.breadcrumbs.home')">@lang('front.breadcrumbs.home')</a>
                                             </li>
                                             <li class="breadcrumb-item active wow fadeInUp"
                                                 data-wow-duration="1s" data-wow-delay="0.15s"
@@ -33,7 +36,7 @@
                                     <h1 class="content-title h1 wow fadeInUp" data-wow-duration="1s"
                                         data-wow-delay="0.25s" data-wow-offset="0"
                                         style="visibility: hidden; animation-duration: 1s; animation-delay: 0.25s; animation-name: none;">
-                                        {{ $subtitle }}</h1>
+                                        {!! $subtitle !!}</h1>
                                 </article>
                             </div>
                         </div>

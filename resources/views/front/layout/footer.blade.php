@@ -1,3 +1,6 @@
+@php
+    $locale = app()->getLocale();
+@endphp
 <footer class="footer">
     <div class="container-fluid">
         <div
@@ -10,10 +13,10 @@
             <div class="col-auto ml-md-auto mr-xl-auto">
                 <nav class="footer-sitemap">
                     <ul>
-                        <li><a href="kurumsal.html" title="Kurumsal">KURUMSAL</a></li>
-                        <li><a href="santrallerimiz.html" title="Santrallerimiz">SANTRALLERİMİZ</a></li>
-                        <li><a href="haberler.html" title="Haberler">HABERLER</a></li>
-                        <li><a href="iletisim.html" title="İletişim">İLETİŞİM</a></li>
+                        <li><a href="{{ $locale == 'en' ? '/en/corporate' : '/kurumsal' }}">@lang('front.header.corporate')</a></li>
+                        <li><a href="{{ $locale == 'en' ? '/en/power-plants' : '/santrallerimiz' }}">@lang('front.header.powerplants')</a></li>
+                        <li><a href="{{ $locale == 'en' ? '/en/news' : '/haberler' }}">@lang('front.header.news')</a></li>
+                        <li><a href="{{ $locale == 'en' ? '/en/contact' : '/iletisim' }}">@lang('front.header.contact')</a></li>
                     </ul>
                 </nav>
             </div>
@@ -34,12 +37,18 @@
             </div>
             <div class="col-md-auto text-md-right">
                 <div class="copyright">
-                    <p>©2019, Polat Enerji. Tüm hakları saklıdır.</p>
+                    <p>@lang('front.copyright')</p>
                     <ul class="justify-content-lg-end">
-                        <li><a href="/15-politikalar-ve-belgeler/" title="Politikalar ve Belgeler"
-                               class="active">Politikalar ve Belgeler</a></li>
-                        <li><a href="/16-cerez-politikasi/" title="Çerez Politikası" class="active">Çerez
-                                Politikası</a></li>
+                        @if(app()->getLocale() == 'en')
+                            <li>
+                                <a href="/en/cookie-policy/" title="@lang('front.cookie')"
+                                   class="active">@lang('front.cookie_en')</a>
+                            </li>
+                        @else
+                            <li><a href="/politikalar-ve-belgeler/" title="@lang('front.documents')"
+                                   class="active">@lang('front.documents')</a></li>
+                            <li><a href="/cerez-politikasi/" title="@lang('front.cookie')" class="active">@lang('front.cookie')</a></li>
+                        @endif
                     </ul>
                 </div>
             </div>

@@ -142,7 +142,7 @@
                                             </path>
                                         </svg>
                                         <h6 class="content-title h6 mb-1"> {{ $power->icons['location'][$local][0]['year'] }}
-                                            <br> {{ $power->icons['company'][$local][0]['location'] }} </h6>
+                                            <br> {{ $power->icons['location'][$local][0]['location'] }} </h6>
                                         <p class="content-description mt-auto">{!! $power->icons['location'][$local][0]['description'] !!}</p>
                                     </article>
                                 </div>
@@ -320,7 +320,7 @@
                 </div>
             </section>
         @endif
-        @if($power->galleries[0]['image'] != null)
+        @if(isset($power->galleries[0]['image']) && $power->galleries[0]['image'] != null)
             <section class="content content--text pb-4 pb-lg-6 pb-xl-8 wow fadeInUp" data-wow-duration="1s"
                      data-wow-delay="1.45s" data-wow-offset="0"
                      style="visibility: visible; animation-duration: 1s; animation-delay: 1.45s;">
@@ -339,7 +339,7 @@
                                                         class="content-image background embed-responsive-item loader--loaded"
                                                         src="./assets/images/empty.png"
                                                         data-src="{{ \Illuminate\Support\Facades\Storage::url($item['image']) }}"
-                                                        alt="Soma RES" data-loader=""
+                                                        data-loader=""
                                                         style="background-image: url({{ \Illuminate\Support\Facades\Storage::url($item['image']) }});">
                                                     </figure>
                                                 </a>

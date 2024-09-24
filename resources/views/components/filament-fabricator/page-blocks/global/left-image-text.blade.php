@@ -10,7 +10,7 @@
                         <article class="content-body">
                             <h2 class="content-title h1">{!! $rightTitle !!}</h2>
                             <p class="content-description">{!! $rightDescription !!}</p> <span
-                                class="btn btn-default btn-light">Daha Fazla</span>
+                                class="btn btn-default btn-light">@lang('front.read_more')</span>
                         </article>
                     </div>
                     <div class="info-boxes-item-figure col-lg-12 order-1 order-lg-2">
@@ -31,7 +31,7 @@
                         <article class="content-body">
                             <h2 class="content-title h1">{!! $leftTitle !!}</h2>
                             <p class="content-description">{!! $leftDescription !!}</p> <span
-                                class="btn btn-default btn-light">Daha Fazla</span>
+                                class="btn btn-default btn-light">@lang('front.read_more')</span>
                         </article>
                     </div>
                     <div class="info-boxes-item-figure col-lg-12 order-1 order-lg-1">

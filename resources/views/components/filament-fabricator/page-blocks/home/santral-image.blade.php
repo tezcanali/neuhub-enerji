@@ -25,7 +25,7 @@
                                                 </path>
                                             </g>
                                         </svg>
-                            <article><strong>{{ $sehir }}</strong> <span>Şehir</span></article>
+                            <article><strong>{{ $sehir }}</strong> <span>@lang('front.map.city')</span></article>
                         </li>
                         <li>
                             <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
@@ -74,7 +74,7 @@
                                                 </path>
                                             </g>
                                         </svg>
-                            <article><strong>{{ $santral }}</strong> <span>Santral</span></article>
+                            <article><strong>{{ $santral }}</strong> <span>@lang('front.map.santral')</span></article>
                         </li>
                         <li>
                             <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
@@ -86,7 +86,7 @@
                                                 </polygon>
                                             </g>
                                         </svg>
-                            <article><strong>{{ $guc }}</strong> <span>Kurulu Güç</span></article>
+                            <article><strong>{{ $guc }}</strong> <span>@lang('front.map.power')</span></article>
                         </li>
                         <li>
                             <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
@@ -102,7 +102,7 @@
                                                 </path>
                                             </g>
                                         </svg>
-                            <article><strong>{{ $uretim }}</strong> <span>Yıllık Elektrik Üretimi</span>
+                            <article><strong>{{ $uretim }}</strong> <span>@lang('front.map.uretim')</span>
                             </article>
                         </li>
                         <li>
@@ -149,7 +149,7 @@
                                                 </path>
                                             </g>
                                         </svg>
-                            <article><strong>{{ $tedarik }}</strong> <span>Yıllık Elektrik Tedariği</span>
+                            <article><strong>{{ $tedarik }}</strong> <span>@lang('front.map.tedarik')</span>
                             </article>
                         </li>
                         <li>
@@ -169,8 +169,7 @@
                                                 </path>
                                             </g>
                                         </svg>
-                            <article><strong>{{ $emisyon }}</strong> <span>Yıllık Emisyon
-                                                Azaltımı</span></article>
+                            <article><strong>{{ $emisyon }}</strong> <span>@lang('front.map.emisyon')</span></article>
                         </li>
                     </ul>
                 </article>
