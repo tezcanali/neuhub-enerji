@@ -11,7 +11,7 @@
                                     <img
                                         src="{{ \Illuminate\Support\Facades\Storage::url($item['image']) }}"
                                         data-src="{{ \Illuminate\Support\Facades\Storage::url($item['image']) }}"
-                                        width="100%" class="loader--loaded">
+                                        width="100%" data-loader="{ height: 168.66 }" class="loader--loaded">
                                 </figure>
                             </a>
                         </div>
