@@ -7,10 +7,10 @@ use App\Http\Controllers\PowerStationController;
 
 Route::group(['middleware' => ['web', SetLocale::class]], function () {
     // Türkçe için rotalar (Varsayılan dil)
-    Route::get('/blog/{slug}', [BlogController::class, 'show'])->name('blog.show');
+    Route::get('/haberler/{slug}', [BlogController::class, 'show'])->name('blog.show');
 
     // İngilizce için rotalar
-    Route::get('/en/blog/{slug}', [BlogController::class, 'show'])->name('blog.show.en');
+    Route::get('/en/news/{slug}', [BlogController::class, 'show'])->name('blog.show.en');
 
     // Türkçe için rotalar (Varsayılan dil)
     Route::get('/santrallerimiz/{slug}', [PowerStationController::class, 'show'])->name('powerplant.show');
