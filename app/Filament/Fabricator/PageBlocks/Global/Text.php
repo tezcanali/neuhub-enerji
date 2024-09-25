@@ -14,7 +14,7 @@ class Text extends PageBlock
             ->schema([
                 RichEditor::make('content')
                 ->label('İçerik')
-            ]);
+            ])->label('Metin');
     }
 
     public static function mutateData(array $data): array

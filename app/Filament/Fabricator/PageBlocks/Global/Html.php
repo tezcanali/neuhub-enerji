@@ -14,7 +14,7 @@ class Html extends PageBlock
             ->schema([
                 Textarea::make('html')
                 ->label('HTML Kod')
-            ]);
+            ])->label('HTML Video');
     }
 
     public static function mutateData(array $data): array

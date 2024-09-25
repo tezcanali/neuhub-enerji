@@ -33,10 +33,12 @@
                                                 {{ $page->title }}</li>
                                         </ol>
                                     </nav>
-                                    <h1 class="content-title h1 wow fadeInUp" data-wow-duration="1s"
-                                        data-wow-delay="0.25s" data-wow-offset="0"
-                                        style="visibility: hidden; animation-duration: 1s; animation-delay: 0.25s; animation-name: none;">
-                                        {!! $subtitle !!}</h1>
+                                    @if($subtitle)
+                                        <h1 class="content-title h1 wow fadeInUp" data-wow-duration="1s"
+                                            data-wow-delay="0.25s" data-wow-offset="0"
+                                            style="visibility: hidden; animation-duration: 1s; animation-delay: 0.25s; animation-name: none;">
+                                            {!! $subtitle !!}</h1>
+                                    @endif
                                 </article>
                             </div>
                         </div>
