@@ -25,7 +25,7 @@ class Documents extends PageBlock
                         ->required()
                         ->directory('file'),
                 ])
-            ]);
+            ])->label('Döküman List');
     }
 
     public static function mutateData(array $data): array
