@@ -17,7 +17,8 @@ class Documents extends PageBlock
                 Repeater::make('documents')
                 ->schema([
                     TextInput::make('title')
-                    ->label('Başlık'),
+                    ->label('Başlık')
+                    ->required(),
                     FileUpload::make('file')
                         ->label('Döküman PDF')
                         ->maxSize(150000)
@@ -25,6 +26,7 @@ class Documents extends PageBlock
                         ->required()
                         ->directory('file'),
                 ])
+                ->collapsible()
             ])->label('Döküman List');
     }
 
