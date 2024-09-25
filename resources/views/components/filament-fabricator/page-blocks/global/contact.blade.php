@@ -90,8 +90,18 @@
         </div>
     </div>
 </section>
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3007.8304849331125!2d28.967559899999998!3d41.07269790000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab655e4e4c075%3A0xbd2fca4e1234da2e!2sPolat%20Enerji!5e0!3m2!1str!2str!4v1727261222833!5m2!1str!2str" width="1100" height="430" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
+<section class="content pb-4 pb-sm-6 pb-xl-8 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.55s"
+         data-wow-offset="0">
+    <div class="container">
+        <div class="light-boxes-wrapper row row-spacing">
+            <div class="col-24">
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3007.8304849331125!2d28.967559899999998!3d41.07269790000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab655e4e4c075%3A0xbd2fca4e1234da2e!2sPolat%20Enerji!5e0!3m2!1str!2str!4v1727261222833!5m2!1str!2str" width="1100" height="430" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <section class="content pb-4 pb-sm-6 pb-xl-8 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.65s"
          data-wow-offset="0" data-module="form-81"
          style="visibility: visible; animation-duration: 1s; animation-delay: 0.65s;">
