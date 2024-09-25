@@ -15,18 +15,20 @@ class Documents extends PageBlock
         return Block::make('global.documents')
             ->schema([
                 Repeater::make('documents')
-                ->schema([
-                    TextInput::make('title')
-                    ->label('Başlık')
-                    ->required(),
-                    FileUpload::make('file')
-                        ->label('Döküman PDF')
-                        ->maxSize(150000)
-                        ->disk('public')
-                        ->required()
-                        ->directory('file'),
-                ])
-                ->collapsible()
+                    ->schema([
+                        TextInput::make('title')
+                            ->label('Başlık')
+                            ->required(),
+                        FileUpload::make('file')
+                            ->label('Döküman PDF')
+                            ->maxSize(150000)
+                            ->disk('public')
+                            ->required()
+                            ->directory('file'),
+                    ])
+                    ->collapsible()
+                    ->collapsed()
+                    ->itemLabel(fn(array $state): ?string => $state['title'] ?? null)
             ])->label('Döküman List');
     }
 
