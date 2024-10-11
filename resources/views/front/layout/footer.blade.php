@@ -36,7 +36,7 @@
                 </div>
             </div>
             <div class="col-md-auto text-md-right">
-                <div class="copyright">
+                <div class="copyright" >
                     <p>@lang('front.copyright')</p>
                     <ul class="justify-content-lg-end">
                         @if(app()->getLocale() == 'en')
