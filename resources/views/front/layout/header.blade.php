@@ -15,7 +15,9 @@
                         <li><a href="{{ $locale == 'en' ? '/en/corporate' : '/kurumsal' }}" class="active" title="@lang('front.header.corporate')">@lang('front.header.corporate')</a></li>
                         <li><a href="{{ $locale == 'en' ? '/en/power-plants' : '/santrallerimiz' }}" class="active"
                                title="@lang('front.header.powerplants')">@lang('front.header.powerplants')</a></li>
-                        <li><a href="{{ $locale == 'en' ? '/en/news' : '/haberler' }}" class="active" title="@lang('front.header.news')">@lang('front.header.news')</a></li>
+                        @if($locale == 'tr')
+                            <li><a href="/haberler" class="active" title="@lang('front.header.news')">@lang('front.header.news')</a></li>
+                        @endif
                         <li><a href="{{ $locale == 'en' ? '/en/contact' : '/iletisim' }}" class="active" title="@lang('front.header.contact')">@lang('front.header.contact')</a></li>
                     </ul>
                 </nav>
