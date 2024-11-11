@@ -1,28 +1,28 @@
 @font-face {
-    font-family:'Gotham';
-    src:url('../fonts/Gotham-Medium.woff2') format('woff2'),
-    url('../fonts/Gotham-Medium.woff') format('woff');
+    font-family:'Barlow';
+    src:url('../fonts/Barlow-Medium.ttf') format('ttf'),
+    url('../fonts/Barlow-Medium.ttf') format('ttf');
     font-weight:500;
     font-style:normal;
   }
   @font-face {
-    font-family:'Gotham';
-    src:url('../fonts/Gotham-Bold.woff2') format('woff2'),
-    url('../fonts/Gotham-Bold.woff') format('woff');
+    font-family:'Barlow';
+    src:url('../fonts/Barlow-Bold.ttf') format('ttf'),
+    url('../fonts/Barlow-Bold.ttf') format('ttf');
     font-weight:bold;
     font-style:normal;
   }
   @font-face {
-    font-family:'Gotham';
-    src:url('../fonts/Gotham-Book.woff2') format('woff2'),
-    url('../fonts/Gotham-Book.woff') format('woff');
+    font-family:'Barlow';
+    src:url('../fonts/Barlow-Regular.ttf') format('ttf'),
+    url('../fonts/Barlow-Regular.ttf') format('ttf');
     font-weight:normal;
     font-style:normal;
   }
   @font-face {
-    font-family:'Gotham';
-    src:url('../fonts/Gotham-Light.woff2') format('woff2'),
-    url('../fonts/Gotham-Light.woff') format('woff');
+    font-family:'Barlow';
+    src:url('../fonts/Barlow-Light.ttf') format('ttf'),
+    url('../fonts/Barlow-Light.ttf') format('ttf');
     font-weight:300;
     font-style:normal;
   }
@@ -12327,7 +12327,7 @@
     vertical-align:text-top!important
   }
   .text-monospace {
-    font-family:Gotham,sans-serif!important
+    font-family:Barlow,sans-serif!important
   }
   .text-justify {
     text-align:justify!important
@@ -13055,7 +13055,7 @@
     display:block
   }
   .page {
-    font-family:Gotham,sans-serif;
+    font-family:Barlow,sans-serif;
     font-size:14px;
     font-weight:400;
     color:#666;
@@ -17170,4 +17170,3 @@
   .text-align-just {
     text-align:justify !important;
   }
-  

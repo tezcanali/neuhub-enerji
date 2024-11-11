@@ -1,31 +1,28 @@
 @font-face {
-    font-family: 'Gotham';
-    src: url('assets/fonts/Gotham-Medium.woff2') format('woff2'),
-        url('assets/fonts/Gotham-Medium.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
+    font-family:'Barlow';
+    src:url('../fonts/Barlow-Medium.ttf') format('ttf'),
+    url('../fonts/Barlow-Medium.ttf') format('ttf');
+    font-weight:500;
+    font-style:normal;
 }
-
 @font-face {
-    font-family: 'Gotham';
-    src: url('assets/fonts/Gotham-Bold.woff2') format('woff2'),
-        url('assets/fonts/Gotham-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
+    font-family:'Barlow';
+    src:url('../fonts/Barlow-Bold.ttf') format('ttf'),
+    url('../fonts/Barlow-Bold.ttf') format('ttf');
+    font-weight:bold;
+    font-style:normal;
 }
-
 @font-face {
-    font-family: 'Gotham';
-    src: url('assets/fonts/Gotham-Book.woff2') format('woff2'),
-        url('assets/fonts/Gotham-Book.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+    font-family:'Barlow';
+    src:url('../fonts/Barlow-Regular.ttf') format('ttf'),
+    url('../fonts/Barlow-Regular.ttf') format('ttf');
+    font-weight:normal;
+    font-style:normal;
 }
-
 @font-face {
-    font-family: 'Gotham';
-    src: url('assets/fonts/Gotham-Light.woff2') format('woff2'),
-        url('assets/fonts/Gotham-Light.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
+    font-family:'Barlow';
+    src:url('../fonts/Barlow-Light.ttf') format('ttf'),
+    url('../fonts/Barlow-Light.ttf') format('ttf');
+    font-weight:300;
+    font-style:normal;
 }
