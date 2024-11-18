@@ -8,7 +8,7 @@
             <div class="col-auto"><a href="/" title="Polat Enerji">
                     <figure class="content-image"><img class="svg"
                                                        src="{{ asset('front/img/logo.png') }}"
-                                                       alt="Polat Enerji"></figure>
+                                                       alt="Polat Enerji" height="80px"></figure>
                 </a></div>
             <div class="col-auto ml-md-auto mr-xl-auto">
                 <nav class="footer-sitemap">
