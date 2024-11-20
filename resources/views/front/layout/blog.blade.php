@@ -8,10 +8,10 @@
     @php
         $settings = \Joaopaulolndev\FilamentGeneralSettings\Models\GeneralSetting::find(1);
     @endphp
-    <link rel="apple-touch-icon" sizes="76x76" href="{{ $settings->site_favicon }}"/>
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ $settings->site_favicon }}"/>
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ $settings->site_favicon }}"/>
-    <link rel="shortcut icon" href="{{ $settings->site_favicon }}"/>
+        <link rel="apple-touch-icon" sizes="76x76" href="{{ \Illuminate\Support\Facades\Storage::url($settings->site_favicon) }}"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ \Illuminate\Support\Facades\Storage::url($settings->site_favicon) }}"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ \Illuminate\Support\Facades\Storage::url($settings->site_favicon) }}"/>
+    <link rel="shortcut icon" href="{{ \Illuminate\Support\Facades\Storage::url($settings->site_favicon) }}"/>
     <link rel="mask-icon" href="{{ asset('front/safari-pinned-tab.svg') }}" color="#000"/>
     <meta name="msapplication-TileColor" content="#000"/>
     <meta name="theme-color" content="#000"/>

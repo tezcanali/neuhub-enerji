@@ -7,7 +7,7 @@
         <div class="row align-items-center justify-content-between">
             <div class="col-auto"><a href="{{ $locale == 'en' ? '/en/' : '/' }}">
                     <figure class="header-logo"><img class="svg"
-                                                     src="{{ $settings->site_logo }}"
+                                                     src="{{ \Illuminate\Support\Facades\Storage::url($settings->site_logo) }}"
                                                      alt="Polat Enerji" height="80px"></figure>
                 </a></div>
             <div class="col-auto ml-auto d-none d-lg-block">

@@ -8,7 +8,7 @@
             class="row row-spacing row-spacing-horizontal align-items-center justify-content-between justify-content-xxl-end">
             <div class="col-auto"><a href="/" title="Polat Enerji">
                     <figure class="content-image"><img class="svg"
-                                                       src="{{ asset('front/img/logo.png') }}"
+                                                       src="{{ \Illuminate\Support\Facades\Storage::url($settings->site_logo) }}"
                                                        alt="Polat Enerji" height="80px"></figure>
                 </a></div>
             <div class="col-auto ml-md-auto mr-xl-auto">
