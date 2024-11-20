@@ -1,4 +1,7 @@
 @aware(['page'])
+@php
+    $settings = \Joaopaulolndev\FilamentGeneralSettings\Models\GeneralSetting::find(1);
+@endphp
 <section class="banner banner--main window--inner-height">
     <div class="container-full">
         <div class="swiper"
@@ -70,14 +73,15 @@
         </div>
         <div class="social-links">
             <ul>
-                <li><a href="https://www.facebook.com/polatenerji" target="_blank" title="Facebook"
-                       rel="me"><i class="icon-facebook-1"></i></a></li>
-                <li><a href="https://www.instagram.com/polatenerji/" target="_blank" title="Instagram"
-                       rel="me"><i class="icon-instagram-1"></i></a></li>
-                <li><a href="https://www.linkedin.com/company/polat-enerji-san.-ve-tic.-a.s/about/"
-                       target="_blank" title="Linked In" rel="me"><i class="icon-linkedin-1"></i></a></li>
-                <li><a href="https://www.youtube.com/@polat.enerji" target="_blank" title="Youtube"
-                       rel="me"><i class="icon-youtube-play"></i></a></li>
+                @foreach($settings->social_network as $platform => $url)
+                    @if($url !== null)
+                        <li>
+                            <a href="{{ $url }}" target="_blank" title="{{ ucfirst($platform) }}" rel="me">
+                                <i class="icon-{{ $platform }}{{ $platform === 'youtube' ? '-play' : '-1' }}"></i>
+                            </a>
+                        </li>
+                    @endif
+                @endforeach
             </ul>
         </div>
     </div>

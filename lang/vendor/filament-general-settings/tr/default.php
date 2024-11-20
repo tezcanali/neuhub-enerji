@@ -47,4 +47,6 @@ return [
     'amazon_ses_secret' => 'Amazon SES Gizli Anahtarı',
     'amazon_ses_region' => 'Amazon SES Bölgesi',
     'postmark_token' => 'Postmark Jetonu',
+    'site_logo' => 'Site Logo',
+    'site_favicon' => 'Favicon',
 ];

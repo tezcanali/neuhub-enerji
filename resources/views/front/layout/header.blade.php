@@ -1,12 +1,13 @@
 @php
     $locale = app()->getLocale();
+    $settings = \Joaopaulolndev\FilamentGeneralSettings\Models\GeneralSetting::find(1);
 @endphp
 <header class="header">
     <div class="container-fluid">
         <div class="row align-items-center justify-content-between">
             <div class="col-auto"><a href="{{ $locale == 'en' ? '/en/' : '/' }}">
                     <figure class="header-logo"><img class="svg"
-                                                     src="{{ asset('front/img/logo.png') }}"
+                                                     src="{{ $settings->site_logo }}"
                                                      alt="Polat Enerji" height="80px"></figure>
                 </a></div>
             <div class="col-auto ml-auto d-none d-lg-block">
@@ -47,14 +48,15 @@
         </nav>
         <div class="page-responsive-menu-social">
             <ul>
-                <li><a href="https://www.facebook.com/polatenerji" target="_blank" title="Facebook" rel="me"><i
-                            class="icon-facebook-1"></i></a></li>
-                <li><a href="https://www.instagram.com/polatenerji/" target="_blank" title="Instagram"
-                       rel="me"><i class="icon-instagram-1"></i></a></li>
-                <li><a href="https://www.linkedin.com/company/polat-enerji-san.-ve-tic.-a.s/about/"
-                       target="_blank" title="Linked In" rel="me"><i class="icon-linkedin-1"></i></a></li>
-                <li><a href="https://www.youtube.com/@polat.enerji" target="_blank" title="Youtube" rel="me"><i
-                            class="icon-youtube-play"></i></a></li>
+                @foreach($settings->social_network as $platform => $url)
+                    @if($url !== null)
+                        <li>
+                            <a href="{{ $url }}" target="_blank" title="{{ ucfirst($platform) }}" rel="me">
+                                <i class="icon-{{ $platform }}{{ $platform === 'youtube' ? '-play' : '-1' }}"></i>
+                            </a>
+                        </li>
+                    @endif
+                @endforeach
             </ul>
         </div>
     </div>
