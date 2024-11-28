@@ -30,7 +30,7 @@
                     </div>
                 @elseif($loop->iteration == 2)
                     <div class="col-lg-8">
-                        <a href="/5-haberler/670-polat-enerji-ruzgar-enerjisinde-yine-lider/" target="_self"
+                        <a href="{{ $locale == 'en' ? '/en/news/' . $blog->slug : '/haberler/' . $blog->slug }}" target="_self"
                            class="routing-box routing-box-inferior wow fadeInUp" data-wow-duration="1s"
                            data-wow-delay="0.45s" data-wow-offset="0"
                            title="{{ $blog->title }}"
@@ -38,7 +38,7 @@
                             <div class="routing-box-image">
                                 <figure class="content-image background background--cover loader--loaded"
                                         src="/_DEFAULT/assets/images/empty.png"
-                                        data-src="https://www.polatenerji.com/_FILES/_CACHE/670/Image-1920x1080-0.jpg?v=20240904132530"
+                                        data-src="{{ \Illuminate\Support\Facades\Storage::url($blog->image) }}"
                                         data-loader=""
                                         style="background-image: url({{ \Illuminate\Support\Facades\Storage::url($blog->image) }});"></figure>
                             </div>
@@ -52,7 +52,7 @@
                 @elseif($loop->iteration == 3)
                     <div class="col-lg-8">
                         <a
-                            href="/5-haberler/668-partner-egs-ve-polat-enerji-den-turkiye-nin-en-buyuk-res-ine-entegre-edilecek-ilk-enerji-depolama-sistemi-icin-imzalar-atildi/"
+                            href="{{ $locale == 'en' ? '/en/news/' . $blog->slug : '/haberler/' . $blog->slug }}"
                             target="_self" class="routing-box routing-box-inferior wow fadeInUp" data-wow-duration="1s"
                             data-wow-delay="0.55s" data-wow-offset="0"
                             title="{{ $blog->title }}"
@@ -60,7 +60,7 @@
                             <div class="routing-box-image">
                                 <figure class="content-image background background--cover loader--loaded"
                                         src="/_DEFAULT/assets/images/empty.png"
-                                        data-src="https://www.polatenerji.com/_FILES/_CACHE/668/Image-1920x1080-0.jpeg?v=20240904132530"
+                                        data-src="{{ \Illuminate\Support\Facades\Storage::url($blog->image) }}"
                                         data-loader=""
                                         style="background-image: url({{ \Illuminate\Support\Facades\Storage::url($blog->image) }});"></figure>
                             </div>
@@ -73,7 +73,7 @@
                     </div>
                 @elseif($loop->iteration == 4)
                     <div class="col-lg-16">
-                        <a href="/5-haberler/666-polat-enerji-ye-bir-odul-de-icci-den/" target="_self"
+                        <a href="{{ $locale == 'en' ? '/en/news/' . $blog->slug : '/haberler/' . $blog->slug }}" target="_self"
                            class="routing-box routing-box-sideBySide wow fadeInUp" data-wow-duration="1s"
                            data-wow-delay="0.65s" data-wow-offset="0"
                            title="{{ $blog->title }}"
@@ -81,7 +81,7 @@
                             <div class="routing-box-image">
                                 <figure class="content-image background background--cover loader--loaded"
                                         src="/_DEFAULT/assets/images/empty.png"
-                                        data-src="https://www.polatenerji.com/_FILES/_CACHE/666/Image-1920x1080-0.jpg?v=20240904132530"
+                                        data-src="{{ \Illuminate\Support\Facades\Storage::url($blog->image) }}"
                                         data-loader=""
                                         style="background-image: url({{ \Illuminate\Support\Facades\Storage::url($blog->image) }});"></figure>
                             </div>
@@ -96,7 +96,7 @@
                 @else
                     <div class="col-24">
                         <a
-                            href="/5-haberler/664-polat-enerji-ye-12-turkiye-ruzgar-enerjisi-kongresinden-anlamli-odul/"
+                            href="{{ $locale == 'en' ? '/en/news/' . $blog->slug : '/haberler/' . $blog->slug }}"
                             target="_self" class="routing-box routing-box-blog flex-row-md-reverse wow fadeInUp"
                             data-wow-duration="1s" data-wow-delay="0.75s" data-wow-offset="0"
                             title="{{ $blog->title }}"
@@ -104,7 +104,7 @@
                             <div class="routing-box-image">
                                 <figure class="content-image background background--cover loader--loaded"
                                         src="/_DEFAULT/assets/images/empty.png"
-                                        data-src="https://www.polatenerji.com/_FILES/_CACHE/664/Image-1920x1080-0.jpeg?v=20240904132530"
+                                        data-src="{{ \Illuminate\Support\Facades\Storage::url($blog->image) }}"
                                         data-loader=""
                                         style="background-image: url({{ \Illuminate\Support\Facades\Storage::url($blog->image) }});"></figure>
                             </div>

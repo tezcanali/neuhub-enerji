@@ -165,7 +165,7 @@ class BlogResource extends Resource
             ->actions([
                 Action::make('visit')
                     ->label(__('filament-fabricator::page-resource.actions.visit'))
-                    ->url(fn ($record) => url('/blog/' . $record->slug))
+                    ->url(fn ($record) => url('/haberler/' . $record->slug))
                     ->icon('heroicon-o-arrow-top-right-on-square')
                     ->openUrlInNewTab()
                     ->color('success'),
