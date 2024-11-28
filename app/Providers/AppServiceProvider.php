@@ -6,6 +6,7 @@ use Filament\Support\Facades\FilamentView;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\ServiceProvider;
+use Joaopaulolndev\FilamentGeneralSettings\Models\GeneralSetting;
 use Spatie\Health\Checks\Checks\CacheCheck;
 use Spatie\Health\Checks\Checks\DatabaseCheck;
 use Spatie\Health\Checks\Checks\DatabaseTableSizeCheck;
@@ -35,6 +36,48 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        FilamentView::registerRenderHook(
+            'filament-fabricator.head.end',
+            function (): string {
+                $setting = GeneralSetting::find(1);
+
+                if ($setting && !empty($setting->more_configs)) {
+                    $configs = is_array($setting->more_configs) ? $setting->more_configs : json_decode($setting->more_configs, true);
+
+                    return isset($configs['header']) ? $configs['header'] : '';
+                }
+                return '';
+            }
+        );
+
+        FilamentView::registerRenderHook(
+            'filament-fabricator.body.start',
+            function (): string {
+                $setting = GeneralSetting::find(1);
+
+                if ($setting && !empty($setting->more_configs)) {
+                    $configs = is_array($setting->more_configs) ? $setting->more_configs : json_decode($setting->more_configs, true);
+
+                    return isset($configs['body']) ? $configs['body'] : '';
+                }
+                return '';
+            }
+        );
+
+        FilamentView::registerRenderHook(
+            'filament-fabricator.scripts.start',
+            function (): string {
+                $setting = GeneralSetting::find(1);
+
+                if ($setting && !empty($setting->more_configs)) {
+                    $configs = is_array($setting->more_configs) ? $setting->more_configs : json_decode($setting->more_configs, true);
+
+                    return isset($configs['footer']) ? $configs['footer'] : '';
+                }
+                return '';
+            }
+        );
+
         FilamentView::registerRenderHook(
             'filament-fabricator.body.end',
             fn (): string => Blade::render('front/layout/footer'),
