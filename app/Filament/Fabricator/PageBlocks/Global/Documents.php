@@ -21,6 +21,7 @@ class Documents extends PageBlock
                             ->required(),
                         FileUpload::make('file')
                             ->label('Döküman PDF')
+                            ->maxSize(10000000)
                             ->disk('public')
                             ->required()
                             ->directory('file'),

@@ -13,7 +13,8 @@ return [
         "corporate" => "KURUMSAL",
         "powerplants" => "SANTRALLERİMİZ",
         "news" => "HABERLER",
-        "contact" => "İLETİŞİM"
+        "contact" => "İLETİŞİM",
+        "sustainability" => "SÜRDÜRÜLEBİLİRLİK"
     ],
     "breadcrumbs" => [
         'home' => "ANASAYFA"

@@ -13,7 +13,8 @@ return [
         "corporate" => "CORPORATE",
         "powerplants" => "POWER PLANTS",
         "news" => "NEWS",
-        "contact" => "CONTACT"
+        "contact" => "CONTACT",
+         "sustainability" => "SUSTAINABILITY"
     ],
     "breadcrumbs" => [
         'home' => "HOME"
