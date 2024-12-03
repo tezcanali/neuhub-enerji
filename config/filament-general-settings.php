@@ -20,18 +20,21 @@ return [
                 'header' => [
                     'type' => TypeFieldEnum::Textarea->value,
                     'label' => 'Header Script',
+                    'placeholder' => '',
                     'rows' => '3',
                     'required' => false,
                 ],
                 'footer' => [
                     'type' => TypeFieldEnum::Textarea->value,
                     'label' => 'Footer Script',
+                    'placeholder' => '',
                     'rows' => '3',
                     'required' => false,
                 ],
                 'robots' => [
                     'type' => TypeFieldEnum::Textarea->value,
                     'label' => 'Robots.txt',
+                    'placeholder' => '',
                     'rows' => '3',
                     'required' => false,
                 ],
