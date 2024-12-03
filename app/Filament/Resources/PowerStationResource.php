@@ -157,6 +157,7 @@ class PowerStationResource extends Resource
                                 FileUpload::make('file1')
                                     ->label('PDF 1')
                                     ->maxSize(150000)
+                                    ->preserveFilenames()
                                     ->disk('public')
                                     ->directory('file')
                                     ->optimize('webp')
@@ -166,7 +167,7 @@ class PowerStationResource extends Resource
                                     ->translatable(),
                                 FileUpload::make('file2')
                                     ->label('PDF 2')
-                                    ->image()
+                                    ->preserveFilenames()
                                     ->maxSize(150000)
                                     ->disk('public')
                                     ->directory('file')

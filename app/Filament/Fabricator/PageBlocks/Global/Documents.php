@@ -21,6 +21,7 @@ class Documents extends PageBlock
                             ->required(),
                         FileUpload::make('file')
                             ->label('Döküman PDF')
+                            ->preserveFilenames()
                             ->disk('public')
                             ->required()
                             ->directory('file'),
