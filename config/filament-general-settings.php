@@ -4,9 +4,8 @@ use Joaopaulolndev\FilamentGeneralSettings\Enums\TypeFieldEnum;
 
 return [
     'show_application_tab' => true,
-    'show_analytics_tab' => false,
-    'show_logo_and_favicon' => true,
-    'show_seo_tab' => false,
+    'show_analytics_tab' => true,
+    'show_seo_tab' => true,
     'show_email_tab' => true,
     'show_social_networks_tab' => true,
     'expiration_cache_config_time' => 60,
@@ -20,25 +19,26 @@ return [
                 'header' => [
                     'type' => TypeFieldEnum::Textarea->value,
                     'label' => 'Header Script',
-                    'placeholder' => '',
+                    'placeholder' => "<script src='https://google.com/app.js'></script>",
                     'rows' => '3',
                     'required' => false,
                 ],
                 'footer' => [
                     'type' => TypeFieldEnum::Textarea->value,
                     'label' => 'Footer Script',
-                    'placeholder' => '',
+                    'placeholder' => "<script src='https://google.com/app.js'></script>",
                     'rows' => '3',
                     'required' => false,
                 ],
                 'robots' => [
                     'type' => TypeFieldEnum::Textarea->value,
                     'label' => 'Robots.txt',
-                    'placeholder' => '',
+                    'placeholder' => "",
                     'rows' => '3',
                     'required' => false,
                 ],
             ]
         ],
-    ]
+    ],
+    'show_logo_and_favicon' => true,
 ];
