@@ -10,11 +10,6 @@ class HealthCheckResults extends BaseHealthCheckResults
 
     protected static ?int $navigationSort = 4;
 
-    public function getHeading(): string|\Illuminate\Contracts\Support\Htmlable
-    {
-        return 'Uygulama Sağlığı';
-    }
-
     public static function getNavigationGroup(): ?string
     {
         return 'Sistem';

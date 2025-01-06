@@ -2,6 +2,7 @@
 
 return [
     'navigation' => [
-        'label' => 'Sistem Sağlığı',
+        'group' => 'Ayarlar',
+        'label' => 'Uygulama Sağlığı',
     ],
 ];
